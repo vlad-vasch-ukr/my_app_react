@@ -1,6 +1,7 @@
 import ToDoList from './ToDoList/ToDoList'
 import Clock from './Clock/Clock'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import 'materialize-css/dist/css/materialize.css'
 
 
 function App() {
