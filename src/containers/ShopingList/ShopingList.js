@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
-import ToDoItem from '../ToDoItem/ToDoItem'
-import './ToDoList.css'
+import classes from './ShopingList.module.css'
+import ShopingItem from '../../components/ShopingItem/ShopingItem'
+import InputItem from '../../components/InputItem/InputItem'
 
-class ToDoList extends Component {
+
+class ShopingList extends Component {
     constructor (props) {
         super(props)
         this.state = {
@@ -37,21 +39,23 @@ class ToDoList extends Component {
 
 
         return (
-            <div>
-                <ul className="list-group">
+            <div className={classes.ShopingList}>
+                <ul>
                    {
                        this.state.listItems.map((item, index) => {
                           return (
-                           <ToDoItem listItem={item} key={index} onDelete={this.deleteItemHendler.bind(this, index)}/>
+                           <ShopingItem listItem={item} key={index} onDelete={this.deleteItemHendler.bind(this, index)}/>
                           )
                        })
                    }
                </ul>
-               <input type="text" onChange={this.changeInputHandler}/>
-               <button className="btn btn-warning" style={{marginLeft: '10px'}} onClick={this.addItemHandler}>Add</button>
+               <InputItem
+                 onChange={this.changeInputHandler}
+                 onClick={this.addItemHandler}
+               />
             </div>
         )
     }
 }
 
-export default ToDoList
+export default ShopingList

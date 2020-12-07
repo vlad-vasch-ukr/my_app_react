@@ -1,18 +1,21 @@
-import ToDoList from './ToDoList/ToDoList'
-import Clock from './Clock/Clock'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import 'materialize-css/dist/css/materialize.css'
+import React from 'react'
+import './helpers/normalize.css'
+import ShopingList from './containers/ShopingList/ShopingList'
+import Layout from './hoc/Layout/Layout'
 
 
-function App() {
+class App extends React.Component {
+  constructor (props) {
+    super (props);
+  }
 
-  return (
-    <div className="container">
-      <Clock />
-      <h1 className="text-center">Todo List</h1>
-      <ToDoList />
-    </div>
-  );
+  render () {
+    return (
+     <Layout>
+        <ShopingList />
+     </Layout>
+    );
+  }
 }
 
 export default App;

@@ -1,0 +1,26 @@
+.ShopingItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    padding: 10px 5px;
+    background-color: rgb(177, 170, 135);
+
+    & + & {
+        margin-top: 10px;
+    }
+
+    input {
+        margin-right: 5px;
+    }
+
+    button {
+        font-size: 12px;
+        color: #fff;
+        border: none;
+        background-color: rgb(212, 36, 36);
+        padding: 5px;
+        border-radius: 5px;
+    }
+}

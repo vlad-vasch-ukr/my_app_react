@@ -1,0 +1,13 @@
+.Layout {
+    height: 100vh;
+    background-color: cadetblue;
+    main {
+        margin: 0 auto;
+        padding: 64px 0 0 250px;
+        position: relative;
+
+        & > div {
+            padding: 30px;
+        }
+    }
+}
